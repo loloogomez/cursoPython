@@ -1,0 +1,40 @@
+- path cuando el parametro es obligatorio
+
+- query parametros dinamicos
+
+ej:
+class User()
+	id: int
+	nombre: str
+	apellido: str
+	edad: int
+	autos: list(autos)
+	
+
+#obtener todos los datos de un usuario
+#se usa path
+
+@app.get(/user/id)
+async def usuario(id:int)
+	return usuario con id = id
+	
+	
+#obtener edad de un usuario
+#se usa query
+
+@app.get(/auto/id_usuario/)
+async def publicaciones(id_usuario: int, id_auto: int)
+	return auto con id = id_auto del usuario id_usuario 	 
+	
+codigos http mas tipicos
+
+200: cosas fueron bien
+201: se ha creado algo
+204: no hay contenido
+300: redireccion
+304: not modified
+400 y +: error del cliente
+400: se puede usar para errores genericos
+404: not found
+500 y +: errores severos
+
